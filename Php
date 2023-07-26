@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My PHP Website</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home">
+<h1>Welcome to my website!</h1>
+</section>
+
+<section id="services">
+<h2>Our Services</h2>
+
+<ul>
+<li>Web Design</li>
+<li>Web Development</li>
+<li>Search Engine Optimization</li>
+</ul>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+
+<p>We are a team of experts in web design and development. We provide high quality services to our clients. Our mission is to help businesses succeed online.</p>
+
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<form action="submit.php" method="post">
+<input type="text" name="name" placeholder="Name">
+<input type="email" name="email" placeholder="Email">
+<textarea name="message" placeholder="Message"></textarea>
+<input type="submit" value="Submit">
+</form>
+</section>
+
+<footer>
+<p>Copyright © <?php echo date("Y"); ?> My PHP Website</p>
+</footer>
+
+</body>
+</html>
