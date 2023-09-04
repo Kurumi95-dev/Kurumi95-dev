@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP and JavaScript Example</title>
+</head>
+<body>
+    <h1>PHP and JavaScript Example</h1>
+
+    <?php
+    // PHP code
+    $message = "Hello from PHP!";
+    ?>
+
+    <!-- JavaScript code -->
+    <script>
+        var message = "<?php echo $message; ?>"; // Lấy giá trị từ PHP
+        alert(message); // Hiển thị thông báo bằng JavaScript
+    </script>
+</body>
+</html>
