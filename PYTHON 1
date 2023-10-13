@@ -1,0 +1,90 @@
+
+BÀI 1 PYTHON GIẢ LẬP
+
+
+# Khởi tạo thanh ghi và bộ nhớ
+registers = [0] * 8
+memory = [0] * 100
+
+# Địa chỉ thanh ghi
+A, B, C, D, E, F, G, H = 0, 1, 2, 3, 4, 5, 6, 7
+
+# Các hàm giả lập
+def mov(reg, val):
+    registers[reg] = val
+
+def add(reg, val):
+    registers[reg] += val
+
+def sub(reg, val):
+    registers[reg] -= val
+
+def show_state():
+    print("Registers:", registers)
+    print("Memory:", memory)
+
+# Sử dụng các hàm giả lập
+mov(A, 10)
+mov(B, 20)
+add(C, 30)
+sub(D, 5)
+
+# Hiển thị trạng thái
+show_state()
+
+
+
+
+
+
+
+BÀI 2 PYTHON GIẢ LẬP
+
+# Hàm cộng
+def add(x, y):
+    return x + y
+
+# Hàm trừ
+def subtract(x, y):
+    return x - y
+
+# Hàm nhân
+def multiply(x, y):
+    return x * y
+
+# Hàm chia
+def divide(x, y):
+    if y == 0:
+        return "Error! Division by zero."
+    else:
+        return x / y
+
+# Hiển thị menu
+print("Select operation:")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+
+# Nhập lựa chọn từ người dùng
+choice = input("Enter choice (1/2/3/4):")
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+if choice == '1':
+    print(num1, "+", num2, "=", add(num1, num2))
+
+elif choice == '2':
+    print(num1, "-", num2, "=", subtract(num1, num2))
+
+elif choice == '3':
+    print(num1, "*", num2, "=", multiply(num1, num2))
+
+elif choice == '4':
+    print(num1, "/", num2, "=", divide(num1, num2))
+
+else:
+    print("Invalid input")
+
+
