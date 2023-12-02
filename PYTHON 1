@@ -1,5 +1,5 @@
 
-BÀI 1 PYTHON GIẢ LẬP
+BÀI 1 PYTHON GIẢ LẬP   
 
 
 # Khởi tạo thanh ghi và bộ nhớ
@@ -38,7 +38,7 @@ show_state()
 
 
 
-BÀI 2 PYTHON GIẢ LẬP
+BÀI 2 PYTHON GIẢ LẬP  
 
 # Hàm cộng
 def add(x, y):
