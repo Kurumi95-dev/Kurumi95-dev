@@ -1,0 +1,46 @@
+//bài 1
+
+public class ArrayExample {
+    public static void main(String[] args) {
+        // Khai báo mảng kiểu int
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        // In các phần tử của mảng
+        System.out.println("Array elements:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+        System.out.println();
+
+        // Tổng các phần tử của mảng
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        System.out.println("Sum of elements: " + sum);
+
+        // Khai báo và khởi tạo mảng kiểu String
+        String[] fruits = new String[3];
+        fruits[0] = "Apple";
+        fruits[1] = "Banana";
+        fruits[2] = "Orange";
+
+        // In các phần tử của mảng String
+        System.out.println("Fruits:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
