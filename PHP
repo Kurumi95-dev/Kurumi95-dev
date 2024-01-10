@@ -58,4 +58,36 @@
 
 
 
+//chèn mã JavaScript vào mã PHP
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Insert JavaScript</title>
+</head>
+<body>
+
+    <h1>PHP Insert JavaScript Example</h1>
+
+    <?php
+    // Mã PHP ở đây
+    echo "This is PHP code.";
+    ?>
+
+    <script>
+        // Mã JavaScript ở đây
+        alert("This is JavaScript code.");
+    </script>
+
+    <?php
+    // Tiếp tục với mã PHP nếu cần
+    echo "Continue with PHP code.";
+    ?>
+
+</body>
+</html>
+
+
 
