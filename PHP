@@ -89,5 +89,48 @@
 </body>
 </html>
 
+//bai2
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Array Example</title>
+</head>
+<body>
+
+<?php
+// Khai báo mảng
+$myArray = array("apple", "banana", "cherry", "orange");
+
+// In các phần tử của mảng
+echo "Array elements: ";
+foreach ($myArray as $value) {
+    echo $value . " ";
+}
+echo "<br>";
+
+// Truy cập phần tử của mảng
+echo "Element at index 0: " . $myArray[0] . "<br>";
+echo "Element at index 2: " . $myArray[2] . "<br>";
+
+// Thay đổi giá trị của phần tử
+$myArray[1] = "grape";
+echo "Updated array: ";
+foreach ($myArray as $value) {
+    echo $value . " ";
+}
+echo "<br>";
+
+// Duyệt qua các phần tử của mảng và tính tổng
+$sum = 0;
+foreach ($myArray as $value) {
+    $sum += strlen($value);
+}
+echo "Sum of lengths of elements: " . $sum . "<br>";
+?>
+
+</body>
+</html>
+
+
 
 
