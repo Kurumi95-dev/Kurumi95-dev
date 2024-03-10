@@ -88,4 +88,21 @@ elif choice == '4':
 else:
     print("Invalid input")
 
+Bài 3 python user
+# Khai báo một danh sách chứa thông tin của các người dùng
+users = [
+    {"first_name": "John", "last_name": "Doe", "age": 30, "email": "john@example.com"},
+    {"first_name": "Jane", "last_name": "Smith", "age": 25, "email": "jane@example.com"},
+    {"first_name": "Alice", "last_name": "Johnson", "age": 35, "email": "alice@example.com"}
+]
+
+# Hiển thị thông tin người dùng
+print("User Information")
+print("-----------------")
+for user in users:
+    print("First Name:", user["first_name"])
+    print("Last Name:", user["last_name"])
+    print("Age:", user["age"])
+    print("Email:", user["email"])
+    print("-----------------")
 
