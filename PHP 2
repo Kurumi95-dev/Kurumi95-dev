@@ -19,5 +19,118 @@
 </body>
 </html>
 
+//bai2 php user
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Information</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: auto;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>User Information</h2>
+
+<?php
+// Mảng chứa thông tin của các người dùng
+$users = array(
+    array("John", "Doe", "30", "john@example.com"),
+    array("Jane", "Smith", "25", "jane@example.com"),
+    array("Alice", "Johnson", "35", "alice@example.com")
+);
+
+// Hiển thị thông tin trong bảng
+echo "<table>";
+echo "<tr><th>First Name</th><th>Last Name</th><th>Age</th><th>Email</th></tr>";
+foreach ($users as $user) {
+    echo "<tr>";
+    echo "<td>" . $user[0] . "</td>";
+    echo "<td>" . $user[1] . "</td>";
+    echo "<td>" . $user[2] . "</td>";
+    echo "<td>" . $user[3] . "</td>";
+    echo "</tr>";
+}
+echo "</table>";
+?>
+
+</body>
+</html>
+
+//bai3
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP User Management</title>
+</head>
+<body>
+
+<?php
+// Mảng chứa danh sách người dùng
+$users = array();
+
+// Hàm để thêm người dùng mới
+function addUser($username, $email) {
+    global $users;
+    $users[] = array('username' => $username, 'email' => $email);
+}
+
+// Hàm để hiển thị danh sách người dùng
+function displayUsers() {
+    global $users;
+    echo "<h2>User List:</h2>";
+    echo "<ul>";
+    foreach ($users as $user) {
+        echo "<li>{$user['username']} - {$user['email']}</li>";
+    }
+    echo "</ul>";
+}
+
+// Hàm để xóa người dùng theo tên đăng nhập
+function deleteUser($username) {
+    global $users;
+    foreach ($users as $key => $user) {
+        if ($user['username'] === $username) {
+            unset($users[$key]);
+        }
+    }
+}
+?>
+
+<h1>PHP User Management</h1>
+
+<?php
+// Thêm người dùng mới
+addUser("john_doe", "john@example.com");
+addUser("jane_doe", "jane@example.com");
+
+// Hiển thị danh sách người dùng
+displayUsers();
+
+// Xóa người dùng
+deleteUser("john_doe");
+
+// Hiển thị danh sách người dùng sau khi xóa
+displayUsers();
+?>
+
+</body>
+</html>
 
 
