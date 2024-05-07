@@ -106,3 +106,46 @@ for user in users:
     print("Email:", user["email"])
     print("-----------------")
 
+
+
+Bài 4 
+
+
+import socket
+
+# Khởi tạo máy chủ và cổng
+HOST = '127.0.0.1'  # localhost
+PORT = 12345        # Cổng không phổ biến
+
+# Tạo socket
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
+    # Gắn socket với địa chỉ và cổng
+    server_socket.bind((HOST, PORT))
+
+    # Chờ kết nối từ client
+    server_socket.listen()
+
+    print('Đang chờ kết nối từ client...')
+    conn, addr = server_socket.accept()
+    print('Đã kết nối đến:', addr)
+
+    # Nhận dữ liệu từ client và gửi lại
+    with conn:
+        while True:
+            data = conn.recv(1024)
+            if not data:
+                break
+            print('Dữ liệu nhận được từ client:', data.decode())
+            conn.sendall(data)
+
+
+
+
+
+
+
+
+
+
+
+
