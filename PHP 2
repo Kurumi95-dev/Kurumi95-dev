@@ -134,3 +134,37 @@ displayUsers();
 </html>
 
 
+
+//bai3
+
+<?php
+// Kiểm tra xem có dữ liệu được gửi từ form không
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Lấy thông tin từ form
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Đường dẫn đến tệp lưu trữ thông tin người dùng
+    $file = 'users.txt';
+
+    // Kiểm tra xem tệp tồn tại không
+    if (file_exists($file)) {
+        // Đọc từ tệp và kiểm tra xem thông tin người dùng có khớp không
+        $users = file($file, FILE_IGNORE_NEW_LINES);
+        foreach ($users as $user) {
+            $info = explode('|', $user);
+            if ($info[0] == $username && $info[1] == $password) {
+                // Đăng nhập thành công
+                echo "<h2>Xin chào, $username!</h2>";
+                exit();
+            }
+        }
+        // Đăng nhập không thành công
+        echo "<h2>Sai tên người dùng hoặc mật khẩu. Vui lòng thử lại!</h2>";
+    } else {
+        echo "<h2>Lỗi: Tệp không tồn tại!</h2>";
+    }
+}
+?>
+
+
