@@ -74,6 +74,38 @@ public class DoubleArrayExample {
 }
 
 
+//bai3
+
+public class LongestIncreasingSequence {
+    public static void main(String[] args) {
+        int[] numbers = {5, 2, 8, 6, 3, 6, 9, 7};
+
+        int maxLength = 1; // Độ dài của dãy số tăng
+        int currentLength = 1; // Độ dài của dãy số tăng hiện tại
+
+        // Duyệt qua mảng để tìm dãy số tăng
+        for (int i = 1; i < numbers.length; i++) {
+            // Kiểm tra xem số hiện tại có lớn hơn số trước đó không
+            if (numbers[i] > numbers[i - 1]) {
+                // Nếu có, tăng độ dài của dãy số tăng hiện tại
+                currentLength++;
+            } else {
+                // Nếu không, cập nhật độ dài của dãy số tăng lớn nhất nếu cần
+                maxLength = Math.max(maxLength, currentLength);
+                // Đặt lại độ dài của dãy số tăng hiện tại về 1
+                currentLength = 1;
+            }
+        }
+
+        // Cập nhật độ dài của dãy số tăng lớn nhất nếu cần
+        maxLength = Math.max(maxLength, currentLength);
+
+        System.out.println("Độ dài của dãy số tăng dài nhất là: " + maxLength);
+    }
+}
+
+
+
 
 
 
