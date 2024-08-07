@@ -163,5 +163,75 @@ echo "Sum of lengths of elements: " . $sum . "<br>";
 </body>
 </html>
 
+//bài3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP and CSS Example</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<?php
+// PHP variables for content
+$headerText = "Welcome to My Website!";
+$contentText = "This is a simple example of a webpage created using PHP with embedded HTML and CSS. You can add any content you want here and style it using CSS.";
+$footerText = "Footer Content &copy; " . date("Y");
+?>
+
+<!-- HTML content with embedded PHP -->
+<div class="header">
+    <h1><?php echo $headerText; ?></h1>
+</div>
+
+<div class="content">
+    <p><?php echo $contentText; ?></p>
+</div>
+
+<div class="footer">
+    <p><?php echo $footerText; ?></p>
+</div>
+
+</body>
+</html>
+
+
+
+
+//bài4
 
