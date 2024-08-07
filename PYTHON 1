@@ -138,7 +138,32 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
             print('Dữ liệu nhận được từ client:', data.decode())
             conn.sendall(data)
 
+//bài 5
+from PIL import Image
 
+# Load an image
+image_path = "path/to/your/image.jpg"  # Replace with the actual path to your image
+image = Image.open(image_path)
+
+# Display the image
+image.show()
+
+# Get image details
+print(f"Format: {image.format}")
+print(f"Size: {image.size}")
+print(f"Mode: {image.mode}")
+
+# Save the image in a different format
+output_path = "path/to/save/image.png"  # Replace with the desired output path
+image.save(output_path)
+
+print(f"Image saved to {output_path}")
+
+
+
+
+
+//bài 6
 
 
 
