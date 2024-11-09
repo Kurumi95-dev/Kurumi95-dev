@@ -141,6 +141,61 @@ public class BasicArithmeticOperations {
 
 //bài 5
 
+public class StringOperations {
+    public static void main(String[] args) {
+        // Initializing strings
+        String str1 = "Hello";
+        String str2 = "World";
+        String str3 = "Hello";
+
+        // Concatenation
+        String concatenatedString = str1 + " " + str2;
+        System.out.println("Concatenated String: " + concatenatedString);
+
+        // Finding length of a string
+        System.out.println("Length of str1: " + str1.length());
+
+        // String comparison (equals and equalsIgnoreCase)
+        System.out.println("str1 equals str2? " + str1.equals(str2));
+        System.out.println("str1 equals str3? " + str1.equals(str3));
+        System.out.println("str1 equals 'hello' (case insensitive)? " + str1.equalsIgnoreCase("hello"));
+
+        // Converting to uppercase and lowercase
+        System.out.println("str1 in uppercase: " + str1.toUpperCase());
+        System.out.println("str2 in lowercase: " + str2.toLowerCase());
+
+        // Checking if a substring exists
+        String sentence = "The quick brown fox jumps over the lazy dog";
+        System.out.println("Does sentence contain 'fox'? " + sentence.contains("fox"));
+
+        // Substring extraction
+        String substring = sentence.substring(16, 19);
+        System.out.println("Extracted substring: " + substring);
+
+        // Replacing characters in a string
+        String replacedString = sentence.replace("fox", "cat");
+        System.out.println("Sentence after replacing 'fox' with 'cat': " + replacedString);
+
+        // Trimming whitespace from the beginning and end
+        String withWhitespace = "   Hello World   ";
+        System.out.println("String before trim: '" + withWhitespace + "'");
+        System.out.println("String after trim: '" + withWhitespace.trim() + "'");
+    }
+}
+
+
+
+
+//bài 6
+
+
+
+
+
+
+
+
+
 
 
 
