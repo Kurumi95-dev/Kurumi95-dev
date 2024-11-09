@@ -165,6 +165,63 @@ print(f"Image saved to {output_path}")
 
 //bài 6
 
+# Create and write to a file
+file_path = "example.txt"
+
+# Writing data to the file
+with open(file_path, "w") as file:
+    file.write("Hello, this is the first line.\n")
+    file.write("This is the second line.\n")
+    file.write("And here is the third line.\n")
+print(f"Data has been written to {file_path}")
+
+# Reading the entire file content
+print("\nReading the entire file content:")
+with open(file_path, "r") as file:
+    content = file.read()
+    print(content)
+
+# Reading the file line by line
+print("Reading the file line by line:")
+with open(file_path, "r") as file:
+    for line_number, line in enumerate(file, start=1):
+        print(f"Line {line_number}: {line.strip()}")
+
+# Appending new data to the file
+with open(file_path, "a") as file:
+    file.write("This is an appended line.\n")
+print("\nNew line appended to the file.")
+
+# Reading the file again to confirm the appended content
+print("\nFile content after appending new line:")
+with open(file_path, "r") as file:
+    content = file.read()
+    print(content)
+
+
+
+//bài 7
+
+
+
+
+//bài 8
+
+
+
+
+
+//bài 9
+
+
+
+
+
+
+
+
+
+
 
 
 
