@@ -315,11 +315,74 @@ if (strpos($sentence, $substring) !== false) {
 
 
 //bài4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xử Lý Mảng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Xử Lý Mảng</h1>
+    <form method="post">
+        <label for="array">Nhập các số cách nhau bởi dấu phẩy (,):</label><br>
+        <input type="text" id="array" name="array" placeholder="Ví dụ: 1,2,3,4,5" required><br>
+        <button type="submit">Xử Lý</button>
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Lấy dữ liệu từ form
+        $input = $_POST['array'];
+        
+        // Chuyển chuỗi thành mảng
+        $array = array_map('intval', explode(',', $input));
+
+        // Tính toán
+        $sum = array_sum($array);
+        $average = $sum / count($array);
+        $max = max($array);
+        $min = min($array);
+
+        // Hiển thị kết quả
+        echo "<div class='result'>";
+        echo "<h3>Kết Quả:</h3>";
+        echo "<p>Mảng: [" . implode(", ", $array) . "]</p>";
+        echo "<p>Tổng: $sum</p>";
+        echo "<p>Trung bình: $average</p>";
+        echo "<p>Phần tử lớn nhất: $max</p>";
+        echo "<p>Phần tử nhỏ nhất: $min</p>";
+        echo "</div>";
+    }
+    ?>
+</body>
+</html>
 
 
 
 //bài5
 
+
+//bài6
+
+
+//bài7
 
 
 
