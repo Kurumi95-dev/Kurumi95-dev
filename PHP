@@ -262,14 +262,39 @@ if ($num2 != 0) {
 
 
 //bài5
+<?php
+// Khai báo hai mảng
+$array1 = [1, 2, 3, 4, 5];
+$array2 = [4, 5, 6, 7, 8];
 
+// 1. Hợp nhất hai mảng
+$union = array_unique(array_merge($array1, $array2));
+echo "Hợp nhất 2 mảng: ";
+print_r($union);
 
+// 2. Giao nhau của hai mảng
+$intersection = array_intersect($array1, $array2);
+echo "\nGiao nhau của 2 mảng: ";
+print_r($intersection);
 
+// 3. Phần tử khác biệt (trong $array1 mà không có trong $array2)
+$difference = array_diff($array1, $array2);
+echo "\nPhần tử khác biệt (array1 - array2): ";
+print_r($difference);
 
+// 4. Phần tử khác biệt (trong $array2 mà không có trong $array1)
+$difference2 = array_diff($array2, $array1);
+echo "\nPhần tử khác biệt (array2 - array1): ";
+print_r($difference2);
+?>
 
 
 //bài6
 
+//bài7
+
+
+//bài8
 
 
 
