@@ -201,6 +201,43 @@ with open(file_path, "r") as file:
 
 
 //bài 7
+class User:
+    def __init__(self, name, age, email):
+        """Initialize the User object with name, age, and email."""
+        self.name = name
+        self.age = age
+        self.email = email
+
+    def display_info(self):
+        """Display user information."""
+        print(f"--- User Information ---")
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Email: {self.email}")
+
+    def is_adult(self):
+        """Check if the user is an adult."""
+        return self.age >= 18
+
+
+# Main program
+if __name__ == "__main__":
+    # Create a new user
+    name = input("Enter your name: ")
+    age = int(input("Enter your age: "))
+    email = input("Enter your email: ")
+
+    # Instantiate the User object
+    user = User(name, age, email)
+
+    # Display user information
+    user.display_info()
+
+    # Check if the user is an adult
+    if user.is_adult():
+        print("You are an adult.")
+    else:
+        print("You are not an adult.")
 
 
 
