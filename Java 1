@@ -183,14 +183,44 @@ public class StringOperations {
     }
 }
 
-
-
-
 //bài 6
+import java.util.Scanner;
+
+public class UserDetails {
+    public static void main(String[] args) {
+        // Create a Scanner object for input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter their name
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine(); // Read the name (string)
+
+        // Prompt user to enter their age
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt(); // Read the age (integer)
+
+        // Prompt user to enter their favorite color
+        System.out.print("Enter your favorite color: ");
+        scanner.nextLine(); // Consume the newline left by nextInt
+        String color = scanner.nextLine(); // Read the color (string)
+
+        // Display the user's details
+        System.out.println("\n--- User Details ---");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Favorite Color: " + color);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
 
 
 
 
+//bài 7
+
+//bài 8
 
 
 
