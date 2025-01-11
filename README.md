@@ -7,7 +7,10 @@
 -  I'm thinnking...
 -  I'm Leave....
 - This code snippet provides a simple
--  
+-  This script demonstrates basic form handling and user interaction in PHP, making it a good starting point for more complex applications.
+
+
+
 
 
 <!---
