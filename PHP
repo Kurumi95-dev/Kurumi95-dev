@@ -291,6 +291,30 @@ print_r($difference2);
 
 //bài6
 
+<?php
+// Tạo socket TCP/IP
+$server = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+socket_bind($server, "0.0.0.0", 12345);
+socket_listen($server);
+
+echo "Server đang chạy, chờ kết nối...\n";
+
+// Chờ client kết nối
+$client = socket_accept($server);
+$msg = socket_read($client, 1024);
+echo "Client gửi: $msg\n";
+
+// Gửi phản hồi
+$response = "Hello từ Server!";
+socket_write($client, $response, strlen($response));
+
+// Đóng kết nối
+socket_close($client);
+socket_close($server);
+?>
+
+
+
 //bài7
 
 
