@@ -244,6 +244,46 @@ if __name__ == "__main__":
 
 //bài 8
 
+import socket
+
+# Khởi tạo socket server
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.bind(("0.0.0.0", 12345))  # Lắng nghe trên cổng 12345
+server_socket.listen(1)
+
+print("Server đang chờ kết nối...")
+
+# Chấp nhận kết nối từ client
+client_socket, client_address = server_socket.accept()
+print(f"Kết nối từ: {client_address}")
+
+# Nhận dữ liệu từ client
+data = client_socket.recv(1024).decode()
+print(f"Client gửi: {data}")
+
+# Gửi phản hồi
+client_socket.sendall("Hello từ Server!".encode())
+
+# Đóng kết nối
+client_socket.close()
+server_socket.close()
+
+import socket
+
+# Khởi tạo socket client
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(("127.0.0.1", 12345))  # Kết nối tới server
+
+# Gửi dữ liệu tới server
+message = "Xin chào, Server!"
+client_socket.sendall(message.encode())
+
+# Nhận phản hồi từ server
+response = client_socket.recv(1024).decode()
+print(f"Server trả lời: {response}")
+
+# Đóng kết nối
+client_socket.close()
 
 
 
@@ -253,7 +293,7 @@ if __name__ == "__main__":
 
 
 
-
+//bài 10
 
 
 
